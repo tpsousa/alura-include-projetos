@@ -1,7 +1,5 @@
 
-
 //sort numbers in this values of another numbers
-
 function sort() {
     let numero = document.getElementById('numero').value
 
@@ -22,7 +20,6 @@ function sort() {
       while(sorteados.includes(number)){
         number  = obter_numero(min,max);
       }
-      
       sorted_numbers.push(number);
     }
 
@@ -43,12 +40,30 @@ function alterar_status ( ){
       botao.class.remove('container__botao-desabilitado');
     }
 }
+//function to calc the... 
 function calcular () {
-    if (quantidade > 10 || valor >= 100) {
+    let quantidade  = document.getElementById('quantidade').value;
 
+    let valor = document.getElementById('valor').value
+
+    let total  = quantidade * total;
+
+
+    if (quantidade > 10 || valor >= 100) {
+      total = total - (total / 100 * 5);
     }
+
+}
+
+//function to restart the game 
+function reiniciar() {
+    let quantidade = document.getElementById("quantidade").value = "";
+    let valor = document.getElementById("valor").value = "";
+    let resultado = document.getElementById("resultado");
+    resultado= innerHtml = `<label class = "resultado"> meu_paragrafo </label>`;
+
 }
 function obter_numero () {
-    return Math.floor(Math.random(max - min + 1 ) + max)
+    return Math.floor(Math.random(max - min + 1 ) + max);
 }
 
