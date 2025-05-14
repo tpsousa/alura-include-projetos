@@ -7,7 +7,12 @@ function sort() {
 
     let ate = parseInt(document.getElementById('ate').value);
 
-    //alert("testing the function to see if is working")
+    //alert("testing the function to see if is working");
+
+    if(ate >=de ){
+        alert(` the game as sorted for ${de} to ${ate}`);
+        return
+    };
 
     let sorted_numbers = []; 
 
